@@ -1,0 +1,77 @@
+package hospital;
+import javax.swing.*;
+import java.awt.*;
+
+public class Aplicativo extends JFrame {
+
+    public Aplicativo(){
+        
+       this.setSize(500, 300);
+       this.setLocation(500, 300);  
+       this.setTitle("Cadastro");
+       this.setLayout(null);
+       this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+       
+       JLabel lblID = new JLabel("ID:");
+       lblID.setSize(30, 20);
+       lblID.setLocation(10,10);
+       this.add(lblID);
+        
+       JTextField txtID = new JTextField();
+       txtID.setSize(90,25);
+       txtID.setLocation(60, 10);
+       this.add(txtID);
+       
+       JLabel lblnome = new JLabel("nome:");
+       lblnome.setSize(40, 20);
+       lblnome.setLocation(10,50);
+       this.add(lblnome);
+        
+       JTextField txtnome = new JTextField();
+       txtnome.setSize(400,25);
+       txtnome.setLocation(60, 50);
+       this.add(txtnome);
+     
+              
+       JLabel lblIdade = new JLabel("Idade:");
+       lblIdade.setSize(40, 20);
+       lblIdade.setLocation(10,90);
+       this.add(lblIdade);
+       
+              JTextField txtidade = new JTextField();
+       txtidade.setSize(25,25);
+       txtidade.setLocation(60, 85);
+       this.add(txtidade);
+       
+       JLabel lblIsexo = new JLabel("Sexo:");
+       lblIsexo.setSize(40, 20);
+       lblIsexo.setLocation(90,90);
+       this.add(lblIsexo);
+       
+             JComboBox cbxSexo = new JComboBox();
+       cbxSexo.setSize(50,25);
+       cbxSexo.setLocation(135, 85);
+       cbxSexo.addItem("M");
+       cbxSexo.addItem("F");   
+       this.add(cbxSexo);
+       
+          JLabel lblIaltura = new JLabel("Altura:");
+       lblIaltura.setSize(40, 20);
+       lblIaltura.setLocation(200,90);
+       this.add(lblIaltura);
+       
+             JTextField txtaltura = new JTextField();
+       txtaltura.setSize(25,25);
+       txtaltura.setLocation(250, 85);
+       this.add(txtaltura);
+       
+       
+       
+       JButton btnSair = new JButton("SAIR");
+       btnSair.setSize(90, 25);
+       btnSair.setLocation(30, 200);
+       this.add(btnSair);
+       
+       
+    }
+}
