@@ -1,0 +1,32 @@
+/ **
+ * Atividade para escanear e exibir dispositivos BLE disponíveis.
+ * /
+classe pública DeviceScanActivity estende ListActivity { 
+    bluetoothAdapter bluetoothAdapter privado ; 
+    mScanning booleano privado ; 
+    manipulador de manipulador privado ; 
+
+    // Pára a digitalização após 10 segundos.
+    Final estático privado longo SCAN_PERIOD = 10000 ; 
+    ...
+    private void scanLeDevice ( final booleano enable ) { 
+        if ( ativar ) { 
+            // Pára a varredura após um período de varredura pré-definido.
+            manipulador . postDelayed ( new Runnable () { 
+                @Sobrepor
+                public void run () { 
+                    mScanning = false ; 
+                    bluetoothAdapter . stopLeScan ( leScanCallback );
+                }
+            }, SCAN_PERIOD );
+
+            mScanning = true ; 
+            bluetoothAdapter . startLeScan ( leScanCallback );
+        } mais { 
+            mScanning = false ; 
+            bluetoothAdapter . stopLeScan ( leScanCallback );
+        }
+        ...
+    }
+...
+}
